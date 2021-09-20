@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  position: relative;
+  background-image: url(../img/react.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.carousel {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+  display: none;
+  animation: animimg .5s;
+}
+
+@keyframes animimg {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transition: opacity linear;
+  }
+}
+
+.carousel, .carousel-item img {
+  width: 100%; 
+  text-align: center;
+  margin: auto;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.carousel .carousel-item-visible {
+  display: block;
+}
+
+.carousel .carousel-button {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80%;
+}
+
+.carousel .carousel-button button {
+  border-radius: 50px;
+  border: none;
+  font-size: 38px;
+  padding: 0 15px;
+  cursor: pointer;  
+  background: #aaa;
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .carousel, .carousel-item img {
+    width: 80%;
+    height: auto;
+  }
+
+  .carousel .carousel-button {
+    width: 90%;
+  }
+
+  .carousel .carousel-button button {
+    font-size: 30px;
+    padding: 0 8px;
+  }
+}
